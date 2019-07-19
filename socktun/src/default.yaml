@@ -1,10 +1,10 @@
 ---
   bind:
-    host: '0.0.0.0'
-    ports: [22, 2222]
+    host: '0.0.0.0' # listen host middleware
+    ports: [80, 443] # listen port middleware
   destination:
-    host: '127.0.0.1'
+    host: '127.0.0.1' # local host of ssh and stunnel
     ports:
-      tcp: 80
-      tls: 443
+      tcp: 22 # ssh port
+      tls: 4433 # stunnel port
 ...
